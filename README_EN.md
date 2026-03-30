@@ -44,7 +44,7 @@ Drop images into `docs/images/` and the README will render them.
 
 **Linux/macOS**:
 ```bash
-git clone https://github.com/libaxuan/cursor2api-go.git
+ git clone https://github.com/starsdream666/cursor2api-go.git
 cd cursor2api-go
 chmod +x start.sh
 ./start.sh
@@ -63,7 +63,7 @@ start-go.bat
 
 ```bash
 # Clone the project
-git clone https://github.com/libaxuan/cursor2api-go.git
+ git clone https://github.com/starsdream666/cursor2api-go.git
 cd cursor2api-go
 
 # Download dependencies
@@ -79,7 +79,7 @@ go build -o cursor2api-go
 #### Method 3: Using go run
 
 ```bash
-git clone https://github.com/libaxuan/cursor2api-go.git
+ git clone https://github.com/starsdream666/cursor2api-go.git
 cd cursor2api-go
 go run main.go
 ```

@@ -1,5 +1,10 @@
+# syntax=docker/dockerfile:1.7
+
 # 构建阶段
-FROM golang:1.24-alpine AS builder
+FROM --platform=$BUILDPLATFORM golang:1.24-alpine AS builder
+
+ARG TARGETOS
+ARG TARGETARCH
 
 # 设置工作目录
 WORKDIR /app
@@ -17,7 +22,10 @@ RUN go mod download
 COPY . .
 
 # 构建应用
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o cursor2api-go .
+# buildx 在多架构构建时会传入 TARGETOS/TARGETARCH，这里直接交叉编译，避免 arm64 QEMU 慢编译。
+RUN --mount=type=cache,target=/go/pkg/mod \
+    --mount=type=cache,target=/root/.cache/go-build \
+    CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -trimpath -o cursor2api-go .
 
 # 运行阶段
 FROM alpine:latest

@@ -41,7 +41,7 @@
 
 **Linux/macOS**:
 ```bash
-git clone https://github.com/libaxuan/cursor2api-go.git
+ git clone https://github.com/starsdream666/cursor2api-go.git
 cd cursor2api-go
 chmod +x start.sh
 ./start.sh
@@ -60,7 +60,7 @@ start-go.bat
 
 ```bash
 # 克隆项目
-git clone https://github.com/libaxuan/cursor2api-go.git
+ git clone https://github.com/starsdream666/cursor2api-go.git
 cd cursor2api-go
 
 # 下载依赖
@@ -76,7 +76,7 @@ go build -o cursor2api-go
 #### 方法三：使用 go run
 
 ```bash
-git clone https://github.com/libaxuan/cursor2api-go.git
+ git clone https://github.com/starsdream666/cursor2api-go.git
 cd cursor2api-go
 go run main.go
 ```

@@ -153,7 +153,7 @@ func NewHandler(cfg *config.Config) *Handler {
         </div>
         
         <div class="info">
-            <p><strong>Repository:</strong> <a href="https://github.com/cursor2api/cursor2api-go">cursor2api-go</a></p>
+            <p><strong>Repository:</strong> <a href="https://github.com/starsdream666/cursor2api-go">cursor2api-go</a></p>
             <p><strong>Documentation:</strong> OpenAI API compatible</p>
         </div>
     </div>
